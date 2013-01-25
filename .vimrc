@@ -1,6 +1,6 @@
-call pathogen#runtime_append_all_bundles()
-filetype off
-
+execute pathogen#infect()
+call pathogen#helptags()
+syntax on
 " Recognize file types / set indent mode
 filetype plugin indent on
 
@@ -101,18 +101,23 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+nmap <F8> :TagbarToggle<CR>
+
 if has("autocmd")
     au!
     " Generate ctags
-    au BufWritePost *.php :silent !ctags -R --languages=php . &      
+    "au BufWritePost *.php :silent !ctags -R --languages=php . &      
     " save files on change of focus and change of tab/buffer
     autocmd BufLeave,FocusLost * silent! wall
     autocmd bufwritepost .vimrc source $MYVIMRC
 endif
+syntax on
 
 
 " PLUGINS
 map <F2> :NERDTreeToggle<CR>
+
+" set runtimepath+=~/.vim/bundle/UltiSnips
 
 " http://lerdorf.com/funclist.txt
 set dictionary-=~/funclist.txt dictionary+=~/funclist.txt
@@ -132,5 +137,3 @@ function! InsertTabWrapper()
             return "\<c-p>"
         endif
 endfunction
-
-syntax on
