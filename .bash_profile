@@ -24,7 +24,6 @@ alias ll='ls -l'
 alias ls='ls -G'
 alias l='ls $LS_OPTIONS -lA'
 alias cdva='cd ~/dev/va/pbwos2-va'
-alias cdc='cd ~'
 
 alias ..='cd ..'
 alias ...='cd ../..'
