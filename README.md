@@ -6,7 +6,7 @@ my dotfiles
 vim plugins
 ========
 
-git clone https://github.com/rking/ag.vim.git
+git clone https://github.com/rking/ag.vim.git  
 git clone https://github.com/jiangmiao/auto-pairs.git
 
 git clone https://github.com/mihaifm/bufstop.git
